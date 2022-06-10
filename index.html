@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./src/style/style.css">
+  <!-- theme-color  -->
+  <meta name="theme-color" content="#c46e89">
+  <meta name="msapplication-navbutton-color" content="#c46e89">
+  <!-- ios theme-color  -->
+  <meta http-equiv="Content-Type" content="application/xhtml+xml">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#c46e89">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+  <h3>scroll down 	&#8595;</h3>
+  <h2 class="text">Scroll to See Magic</h2>
+  <section>
+    <h2 class="inner-text">Scroll to See Magic</h2>
+  </section>
+  <div class="container">
+    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci molestiae incidunt tempora explicabo laboriosam at commodi repellat numquam assumenda. Natus accusantium eligendi nostrum non facere cupiditate esse corporis hic ipsam, ipsum sunt molestias provident voluptas, architecto quidem asperiores ipsa accusamus cum iure nihil laboriosam nemo. Dicta earum inventore vitae? Explicabo ipsa corrupti debitis provident tempore voluptate animi, accusamus placeat modi? Saepe ipsam, quidem commodi ipsum quaerat nisi ad! Expedita placeat saepe corporis quam fuga aperiam, quaerat totam inventore qui voluptatum nostrum laudantium pariatur perspiciatis consequatur labore optio illo architecto. Deleniti eveniet nam, ipsum sapiente provident modi a cumque dolorum consequuntur!</p>
+  </div>
+
+  <script>
+  
+    const section = document.querySelector('section')
+    let text = document.querySelector('.text')
+    let innerText = document.querySelector('.inner-text')
+
+    document.body.addEventListener('scroll', () => {
+      const sckollY = document.body.scrollTop
+
+      section.style.clipPath = `circle( ${sckollY}px at center center)`
+      text.style.left = `${ 100 - sckollY / 5}%`
+      innerText.style.left = `${ 100 - sckollY / 5}%`
+    })
+
+    
+   
+  </script>
+</body>
+</html>
